@@ -1,0 +1,6 @@
+name: MischiefMOTD
+version: 0.0.1
+author: sven@wollinger.email
+main: com.mischiefsmp.motd.MischiefMOTD
+api-version: 1.18
+softdepend: ["MischiefCore"]
