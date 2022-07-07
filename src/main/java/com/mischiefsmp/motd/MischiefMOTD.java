@@ -1,5 +1,7 @@
 package com.mischiefsmp.motd;
 
+import com.mischiefsmp.motd.config.PluginConfig;
+import lombok.Getter;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
@@ -10,6 +12,11 @@ import java.nio.file.StandardCopyOption;
 import java.util.logging.Level;
 
 public class MischiefMOTD extends JavaPlugin {
+    @Getter
+    private MischiefMOTD instance;
+
+    @Getter
+    private PluginConfig config;
 
     public void ensureCore(boolean required) {
         if(getServer().getPluginManager().getPlugin("MischiefCore") != null) return;
@@ -29,5 +36,8 @@ public class MischiefMOTD extends JavaPlugin {
     @Override
     public void onEnable() {
         ensureCore(true);
+
+        instance = this;
+        config = new PluginConfig(this);
     }
 }
