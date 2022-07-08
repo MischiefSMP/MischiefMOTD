@@ -1,5 +1,33 @@
 # MischiefMOTD
 
+Allows you to set a fancy MOTD message that is displayed on join.
+
+Supports Minecrafts color codes plus these variables:
+
+
+| Variable  | Example output |
+| ------------- | ------------- |
+| ```${username}```  | SvenWollinger  |
+| ```${world}```  | world  |
+| ```${onlineCount}```  | 1  |
+| ```${totalSlots}```  | 20  |
+| ```${hour}```  | 05  |
+| ```${minute}```  | 20  |
+| ```${second}```  | 16  |
+| ```${day}```  | 08  |
+| ```${month}```  | 07  |
+| ```${year}```  | 2022  |
+| ```${timezone}```  | Europe/Berlin  |
+
+All of these variables can be used more then once.
+
+Example config:
+<img src="https://i.imgur.com/5G5skO3.png">
+
+Example output:
+<img src="https://i.imgur.com/YxpJzHT.png">
+
+
 Part of the MischiefSMP plugin suite.
 
 
