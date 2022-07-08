@@ -1,4 +1,6 @@
+# MOTD. Uncomment if you want an example
 motd:
-  - Line 1
-  - Line 2
-  - Line 3
+  #- "Welcome ${username}!"
+  #- "You are currently in ${world}."
+  #- "Players online: ${onlineCount}/${totalSlots}"
+  #- "${hour}:${minute}:${second} - ${day}.${month}.${year} - ${timezone}"
