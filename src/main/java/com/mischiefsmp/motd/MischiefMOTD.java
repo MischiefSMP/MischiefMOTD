@@ -1,5 +1,6 @@
 package com.mischiefsmp.motd;
 
+import com.mischiefsmp.core.LogManager;
 import com.mischiefsmp.motd.config.PluginConfig;
 import com.mischiefsmp.motd.events.JoinEvent;
 import lombok.Getter;
@@ -41,5 +42,9 @@ public class MischiefMOTD extends JavaPlugin {
         instance = this;
         pluginConfig = new PluginConfig(this);
         getServer().getPluginManager().registerEvents(new JoinEvent(), this);
+        if(MischiefMOTD.getPluginConfig().getMotd() == null) {
+            LogManager lm = new LogManager(this);
+            lm.log("No MOTD set! Edit config.yml if you want a motd to show up on player join!", Level.WARNING);
+        }
     }
 }
